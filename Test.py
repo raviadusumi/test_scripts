@@ -7,8 +7,8 @@ import seaborn as sns
 sns.set() #switches to seaborn defaults
 import fix_yahoo_finance as yf
 try:
-  # Use the %tensorflow_version magic if in colab.
-  %tensorflow_version 2.x
+  import tensorflow.compat.v2 as tf
 except Exception:
   pass
-import tensorflow as tf
+
+tf.enable_v2_behavior()
